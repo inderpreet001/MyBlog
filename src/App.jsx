@@ -1,35 +1,63 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import styled from "styled-components";
+import Card from "./components/Card";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const description =
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec fermentum ante. Donec nec est sodales, tristique tortor vel, tristique ligula. Sed id lorem libero. Nam rhoncus ultricies metus ac congue.";
+  const Title = styled.h1`
+    font-size: 3rem;
+    text-align: center;
+    color: Green;
+    margin-bottom: 70px;
+  `;
+
+  const Grid = styled.section`
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    margin-left: 150px;
+    margin-right: 150px;
+  `;
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Title>My Blog</Title>
+
+      <Grid>
+        <Card
+          title={"First Blog"}
+          description={description}
+          date={"20/7/2023"}
+        ></Card>
+        <Card
+          title={"Second Blog"}
+          description={description}
+          date={"20/7/2023"}
+        ></Card>
+        <Card
+          title={"Third Blog"}
+          description={description}
+          date={"20/7/2023"}
+        ></Card>
+        <Card
+          title={"Fourth Blog"}
+          description={description}
+          date={"20/7/2023"}
+        ></Card>
+        <Card
+          title={"Fifth Blog"}
+          description={description}
+          date={"20/7/2023"}
+        ></Card>
+        <Card
+          title={"Sixth Blog"}
+          description={description}
+          date={"20/7/2023"}
+        ></Card>
+      </Grid>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
